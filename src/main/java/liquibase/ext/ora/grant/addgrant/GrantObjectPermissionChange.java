@@ -30,6 +30,7 @@ public class GrantObjectPermissionChange extends AbstractObjectPermissionChange 
         statement.setInsert(getInsert());
         statement.setDelete(getDelete());
         statement.setExecute(getExecute());
+        statement.setGrantOption(getGrantOption());
 
         return new SqlStatement[]{statement};
     }

@@ -272,6 +272,7 @@
 	        <xsd:attribute name="insert" type="xsd:boolean"/>
 	        <xsd:attribute name="delete" type="xsd:boolean"/>
 	        <xsd:attribute name="execute" type="xsd:boolean"/>
+            <xsd:attribute name="grantOption" type="xsd:boolean"/>
         </xsd:complexType>
     </xsd:element>
 

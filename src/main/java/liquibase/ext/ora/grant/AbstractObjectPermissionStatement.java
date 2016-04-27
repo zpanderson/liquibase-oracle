@@ -18,6 +18,7 @@ public abstract class AbstractObjectPermissionStatement extends
 	private Boolean insert = Boolean.FALSE;
 	private Boolean delete = Boolean.FALSE;
 	private Boolean execute = Boolean.FALSE;
+	private Boolean grantOption = Boolean.FALSE;
 
 	public AbstractObjectPermissionStatement() {
 		super();
@@ -108,6 +109,17 @@ public abstract class AbstractObjectPermissionStatement extends
 
 	public void setExecute(Boolean execute) {
 		this.execute = execute;
+	}
+
+	public Boolean getGrantOption() {
+		if ( grantOption == null ) {
+			return false;
+		}
+		return grantOption;
+	}
+
+	public void setGrantOption(Boolean grantOption) {
+		this.grantOption = grantOption;
 	}
 
 	public String getPermissionList() {

@@ -23,7 +23,9 @@ public class GrantObjectPermissionGenerator extends AbstractSqlGenerator<GrantOb
         sql.append(database.escapeTableName(null, statement.getSchemaName(), statement.getObjectName()));
         sql.append( " TO " );
         sql.append( statement.getRecipientList() );
-
+        //if (statement.getGrantOption()) {
+        sql.append ( " WITH GRANT OPTION ");
+        //}
         return new Sql[]{new UnparsedSql(sql.toString())};
     }
 
